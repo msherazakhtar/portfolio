@@ -1,0 +1,130 @@
+.services-section {
+  position: relative;
+  background-color: var(--color-soft-gray);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 56px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-title {
+  margin-bottom: 16px;
+  font-family: var(--font-headlines);
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: var(--color-deep-blue);
+}
+
+@media (min-width: 768px) {
+  .services-title {
+    font-size: 2.5rem; /* 40px */
+  }
+}
+
+.services-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  color: var(--color-charcoal-gray);
+  line-height: 1.5;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+/* Service Card */
+.service-card {
+  position: relative; /* Relative positioning for absolute watermark */
+  background-color: var(--color-white);
+  padding: 32px;
+  border-radius: 0; /* Sharp, premium look */
+  border-left: 4px solid transparent;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.service-card:hover {
+  border-left-color: var(--color-vibrant-orange);
+  background-color: var(--color-soft-blue-tint);
+  transform: translateX(4px);
+}
+
+/* Watermark Number */
+.service-number {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  font-family: var(--font-subtitles);
+  font-size: 3rem; /* Faint watermark number */
+  font-weight: 800;
+  color: rgba(30, 58, 170, 0.04); /* Faint watermark */
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  transition: all 0.35s ease;
+}
+
+.service-card:hover .service-number {
+  color: rgba(249, 115, 22, 0.08); /* Highlight number watermark on hover */
+  transform: translateY(-2px);
+}
+
+/* Service Icon Wrapper */
+.service-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  height: 48px;
+  background-color: var(--color-soft-gray);
+  color: var(--color-deep-blue);
+  border-radius: 0;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.service-card:hover .service-icon-wrapper {
+  background-color: var(--color-vibrant-orange);
+  color: var(--color-white);
+  transform: scale(1.08);
+}
+
+/* Service Info */
+.service-info {
+  text-align: left;
+}
+
+.service-name {
+  font-family: var(--font-subtitles);
+  font-size: 1.25rem; /* 20px */
+  font-weight: 600;
+  color: var(--color-deep-blue);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.service-desc {
+  font-family: var(--font-body);
+  font-size: 0.9375rem; /* ~15px */
+  color: var(--color-charcoal-gray);
+  line-height: 1.6;
+}

@@ -1,0 +1,115 @@
+.testimonials-section {
+  position: relative;
+  background-color: var(--color-deep-blue);
+  color: var(--color-white);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 56px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonials-title {
+  font-family: var(--font-headlines);
+  font-size: 2.25rem;
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .testimonials-title {
+    font-size: 2.5rem; /* 40px */
+  }
+}
+
+/* Horizontal scroll on mobile, 2x2 grid on desktop */
+.testimonials-grid {
+  display: flex;
+  overflow-x: auto;
+  gap: 24px;
+  padding-bottom: 24px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-vibrant-orange) rgba(255, 255, 255, 0.1);
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scrollbar styling for webkit browsers */
+.testimonials-grid::-webkit-scrollbar {
+  height: 6px;
+}
+
+.testimonials-grid::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.testimonials-grid::-webkit-scrollbar-thumb {
+  background-color: var(--color-vibrant-orange);
+  border-radius: 3px;
+}
+
+.testimonial-card {
+  flex: 0 0 85%; /* 85% width on mobile for peek effect */
+  scroll-snap-align: start;
+  text-align: left;
+  border-left: 3px solid var(--color-vibrant-orange);
+  padding: 8px 0 8px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateX(4px);
+}
+
+@media (min-width: 768px) {
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+    overflow-x: visible;
+    padding-bottom: 0;
+  }
+
+  .testimonial-card {
+    flex: none;
+    padding: 16px 0 16px 32px;
+  }
+}
+
+/* Quotes & Authors styling */
+.testimonial-quote {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.testimonial-author {
+  margin-top: auto;
+}
+
+.testimonial-name {
+  font-family: var(--font-subtitles);
+  font-size: 1.125rem; /* ~18px */
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 4px;
+}
+
+.testimonial-role {
+  font-family: var(--font-body);
+  font-size: 0.8125rem; /* 13px */
+  font-style: italic;
+  color: var(--color-vibrant-orange);
+  font-weight: 500;
+}

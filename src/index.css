@@ -1,0 +1,297 @@
+/* Custom Brand Design System for Sheraz Akhtar */
+
+:root {
+  /* Colors */
+  --color-deep-blue: #1E3A8A;
+  --color-vibrant-orange: #F97316;
+  --color-white: #FFFFFF;
+  --color-soft-gray: #E5E7EB;
+  --color-deep-purple: #6D28D9;
+  --color-charcoal-gray: #374151;
+  --color-soft-blue-tint: #F3F6FC;
+  --color-border-subtle: #E5E7EB;
+  
+  /* Fonts */
+  --font-headlines: 'Poppins', sans-serif;
+  --font-subtitles: 'Montserrat', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+  
+  /* Layout */
+  --max-width: 1200px;
+  --header-height: 80px;
+  --header-shrink-height: 64px;
+}
+
+/* Global Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-charcoal-gray);
+  background-color: var(--color-white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Scale */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--color-deep-blue);
+  line-height: 1.25;
+}
+
+h1 {
+  font-family: var(--font-headlines);
+  font-size: 3.5rem; /* 56px default, will adjust to 64px on larger screens */
+  font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 4rem; /* 64px */
+  }
+}
+
+h2 {
+  font-family: var(--font-headlines);
+  font-size: 2rem; /* 32px */
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 2.5rem; /* 40px */
+  }
+}
+
+h3 {
+  font-family: var(--font-subtitles);
+  font-size: 1.25rem; /* 20px */
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+p {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1rem; /* 16px */
+  color: var(--color-charcoal-gray);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Labels and Tags */
+.label-tag {
+  font-family: var(--font-subtitles);
+  font-size: 0.75rem; /* 12px */
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Section Dividers and Structural Alternations */
+section {
+  padding: 80px 24px;
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  section {
+    padding: 120px 48px;
+  }
+}
+
+.section-divider {
+  height: 1px;
+  background-color: var(--color-soft-gray);
+  width: 100%;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Alternating Sections Style */
+.section-white {
+  background-color: var(--color-white);
+  color: var(--color-charcoal-gray);
+}
+
+.section-soft-gray {
+  background-color: var(--color-soft-gray);
+  color: var(--color-charcoal-gray);
+}
+
+.section-deep-blue {
+  background-color: var(--color-deep-blue);
+  color: var(--color-white);
+}
+
+.section-deep-blue h2, 
+.section-deep-blue h3,
+.section-deep-blue p {
+  color: var(--color-white);
+}
+
+/* Buttons and Links */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  font-family: var(--font-subtitles);
+  font-size: 0.875rem; /* 14px */
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 2px solid transparent;
+}
+
+.btn-filled-orange {
+  background-color: var(--color-vibrant-orange);
+  color: var(--color-white);
+}
+
+.btn-filled-orange:hover {
+  background-color: #ea580c; /* Darker orange */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.2);
+}
+
+.btn-outline-blue {
+  background-color: transparent;
+  color: var(--color-deep-blue);
+  border-color: var(--color-deep-blue);
+}
+
+.btn-outline-blue:hover {
+  background-color: var(--color-deep-blue);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 58, 170, 0.15);
+}
+
+/* Text links */
+.text-link-orange {
+  font-family: var(--font-subtitles);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-vibrant-orange);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.text-link-orange:hover {
+  color: #ea580c;
+}
+
+.text-link-orange:hover svg {
+  transform: translateX(4px);
+}
+
+.text-link-orange svg {
+  transition: transform 0.3s ease;
+}
+
+/* Scroll-triggered reveal animations */
+.reveal-element {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-element.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Forms layout and styles */
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-subtitles);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-charcoal-gray);
+  margin-bottom: 8px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 14px 16px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-charcoal-gray);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-charcoal-gray);
+  border-radius: 0; /* Sharp style rule */
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-control:focus {
+  border-bottom: 2px solid var(--color-vibrant-orange);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* Sticky navigation updates */
+.header-scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Active links in header */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-vibrant-orange);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}

@@ -1,0 +1,124 @@
+.footer-section {
+  background-color: var(--color-deep-blue);
+  color: var(--color-white);
+  padding: 64px 24px 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  text-align: left;
+}
+
+@media (min-width: 1024px) {
+  .footer-section {
+    padding: 80px 48px 40px;
+  }
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-bottom: 48px;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 48px;
+  }
+}
+
+/* Left Brand info */
+.footer-brand h3 {
+  font-family: var(--font-headlines);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 12px;
+}
+
+.footer-brand h3 span {
+  color: var(--color-vibrant-orange);
+}
+
+.footer-brand-tagline {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 300px;
+  line-height: 1.6;
+}
+
+/* Center Links */
+.footer-links-title {
+  font-family: var(--font-subtitles);
+  font-size: 0.8125rem; /* 13px */
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-vibrant-orange);
+  margin-bottom: 20px;
+}
+
+.footer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-link-item a {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+.footer-link-item a:hover {
+  color: var(--color-vibrant-orange);
+  padding-left: 4px;
+}
+
+/* Right Socials */
+.footer-socials-list {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social-btn {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--color-white);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-btn:hover {
+  background-color: var(--color-vibrant-orange);
+  color: var(--color-white);
+  transform: translateY(-3px);
+  border-color: var(--color-vibrant-orange);
+}
+
+/* Bottom Copyright Bar */
+.footer-bottom {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+
+.footer-copy {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.5;
+}
