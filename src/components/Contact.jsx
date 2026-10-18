@@ -35,7 +35,7 @@ export default function Contact() {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       tempErrors.email = 'Email is invalid';
     }
-    if (!formData.description.trim()) tempErrors.description = 'Project description is required';
+    if (!formData.description.trim()) tempErrors.description = 'Please tell me what you need guidance with';
     
     setErrors(tempErrors);
     return Object.keys(tempErrors).length === 0;
@@ -61,7 +61,7 @@ export default function Contact() {
             name: formData.name,
             email: formData.email,
             message: formData.description,
-            subject: `Portfolio Contact Submission from ${formData.name}`,
+            subject: `Mentorship & Career Inquiry from ${formData.name}`,
             from_name: 'Sheraz Portfolio'
           })
         });
@@ -89,9 +89,9 @@ export default function Contact() {
         <div className="contact-grid">
           {/* Left Column - Contact Details */}
           <div className="contact-info reveal-element">
-            <h2 className="contact-title">Let's Build Something Great</h2>
+            <h2 className="contact-title">Let's Accelerate Your Journey</h2>
             <p className="contact-desc">
-              Have a SaaS project, an enterprise backend system to design, or a complex database architecture that needs optimizing? Get in touch today.
+              Whether you are a student preparing for your FYP, a fresh graduate seeking career direction, or a beginner looking for 1-on-1 mentorship on what, how, and why to learn in IT/CS—reach out and let's connect.
             </p>
 
             <div className="contact-details">
@@ -182,14 +182,14 @@ export default function Contact() {
 
                 {/* Project Description Input */}
                 <div className="form-group">
-                  <label htmlFor="description" className="form-label">Project Description</label>
+                  <label htmlFor="description" className="form-label">Your Goals & Questions</label>
                   <textarea
                     id="description"
                     name="description"
                     value={formData.description}
                     onChange={handleChange}
                     className="form-control"
-                    placeholder="Describe your backend scaling needs, tech stack, and goals..."
+                    placeholder="Share where you are in your journey (student, fresh graduate, or beginner), what you're working on, and where you need guidance..."
                     style={errors.description ? { borderBottomColor: '#EF4444' } : {}}
                   ></textarea>
                   {errors.description && <span style={{ color: '#EF4444', fontSize: '0.75rem', marginTop: '4px', display: 'block', textAlign: 'left' }}>{errors.description}</span>}
@@ -209,11 +209,11 @@ export default function Contact() {
                   style={{ width: '100%' }}
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? 'Submitting...' : 'Submit Inquiry'}
+                  {isSubmitting ? 'Submitting...' : 'Send Mentorship Inquiry'}
                 </button>
 
                 <p className="form-row-note">
-                  I respond within 24 hours. Remote-only.
+                  I respond within 24 hours. Open for 1-on-1 mentorship, FYP consulting, and technical talks.
                 </p>
               </form>
             )}

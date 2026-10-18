@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
 import Projects from './components/Projects';
+import SocialShowcase from './components/SocialShowcase';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -21,6 +22,7 @@ export default function App() {
         <About />
         <Services />
         <Projects />
+        <SocialShowcase />
         <Testimonials />
         <Contact />
       </main>

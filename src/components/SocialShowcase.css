@@ -1,0 +1,308 @@
+.social-showcase-section {
+  position: relative;
+  background-color: var(--color-soft-blue-tint);
+  border-top: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
+  padding: 80px 24px;
+}
+
+@media (min-width: 1024px) {
+  .social-showcase-section {
+    padding: 110px 48px;
+  }
+}
+
+/* Header */
+.social-showcase-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 52px;
+}
+
+.instagram-brand-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-white);
+  border: 1px solid rgba(249, 115, 22, 0.3);
+  color: var(--color-vibrant-orange);
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-family: var(--font-subtitles);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.08);
+}
+
+.social-showcase-title {
+  font-family: var(--font-headlines);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-deep-blue);
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .social-showcase-title {
+    font-size: 2.5rem;
+  }
+}
+
+.highlight-instagram {
+  color: var(--color-vibrant-orange);
+  position: relative;
+  display: inline-block;
+}
+
+.social-showcase-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  color: var(--color-charcoal-gray);
+  line-height: 1.6;
+}
+
+/* Vertical Instagram Reels Grid */
+.reels-vertical-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  max-width: 1060px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+@media (min-width: 768px) {
+  .reels-vertical-grid {
+    grid-template-columns: repeat(3, minmax(0, 330px));
+    gap: 28px;
+    justify-content: center;
+  }
+}
+
+/* Vertical Reel Card — Phone Proportions */
+.vertical-reel-card {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  min-height: 520px;
+  height: 520px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  background-color: #0F172A;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vertical-reel-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 22px 45px rgba(30, 58, 170, 0.25);
+  border-color: rgba(249, 115, 22, 0.6);
+}
+
+/* Background Media & Gradients */
+.reel-media-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.reel-background-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vertical-reel-card:hover .reel-background-img {
+  transform: scale(1.06);
+}
+
+.reel-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 23, 42, 0.6) 0%,
+    rgba(15, 23, 42, 0.15) 25%,
+    rgba(15, 23, 42, 0.5) 55%,
+    rgba(15, 23, 42, 0.95) 100%
+  );
+  pointer-events: none;
+}
+
+/* Top Bar */
+.reel-top-bar {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 18px 0;
+}
+
+.reel-tag-pill {
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffffff;
+  padding: 4px 12px;
+  font-family: var(--font-subtitles);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.reel-badge-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+/* Center Play Button */
+.reel-center-play {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.reel-play-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--color-deep-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 3px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vertical-reel-card:hover .reel-play-btn {
+  transform: scale(1.15);
+  background: var(--color-vibrant-orange);
+  color: #ffffff;
+}
+
+/* Bottom UI Layer */
+.reel-bottom-ui {
+  position: relative;
+  z-index: 3;
+  padding: 0 20px 22px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.reel-creator-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.reel-creator-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1.5px solid #ffffff;
+  object-fit: cover;
+  display: block;
+}
+
+.reel-creator-handle {
+  font-family: var(--font-subtitles);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.reel-highlight-badge {
+  background: rgba(249, 115, 22, 0.9);
+  color: #ffffff;
+  font-family: var(--font-subtitles);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.reel-ui-caption {
+  font-family: var(--font-headlines);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.35;
+  margin-bottom: 6px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.reel-ui-desc {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.45;
+  margin-bottom: 14px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.reel-ui-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-subtitles);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #FDE047;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.reel-ui-action svg {
+  transition: transform 0.3s ease;
+}
+
+.vertical-reel-card:hover .reel-ui-action svg {
+  transform: translateX(4px);
+}
+
+/* Bottom CTA */
+.social-showcase-cta {
+  text-align: center;
+  margin-top: 48px;
+}

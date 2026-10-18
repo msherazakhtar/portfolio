@@ -40,12 +40,23 @@ const socials = [
     },
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/sherazai.exe/',
+      url: 'https://www.instagram.com/evolvewithsheraz/',
       svg: (
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
           <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      )
+    },
+    {
+      name: 'Featstack',
+      url: 'https://featstack.co/',
+      svg: (
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 17 12 22 22 17"></polyline>
+          <polyline points="2 12 12 17 22 12"></polyline>
         </svg>
       )
     }
@@ -54,7 +65,7 @@ const socials = [
   const links = [
     { label: 'Home', target: 'home' },
     { label: 'About', target: 'about' },
-    { label: 'Services', target: 'services' },
+    { label: 'Mentorship', target: 'services' },
     { label: 'Work', target: 'projects' },
     { label: 'Testimonials', target: 'testimonials' },
     { label: 'Contact', target: 'contact' },
@@ -67,7 +78,7 @@ const socials = [
         <div className="footer-brand">
           <h3>Sheraz Akhtar<span>.</span></h3>
           <p className="footer-brand-tagline">
-            Building scalable backend systems that grow with your business.
+            Empowering future software engineers with clarity on what, how, and why to learn.
           </p>
         </div>
 
@@ -108,7 +119,7 @@ const socials = [
       {/* Copyright Line */}
       <div className="footer-bottom">
         <p className="footer-copy">
-          © 2025 Sheraz Akhtar · Built by a backend developer who also cares about frontend.
+          © 2026 Sheraz Akhtar · Senior Developer, Mentor & Founder @ Featstack.
         </p>
       </div>
     </footer>

@@ -41,12 +41,23 @@ export default function Hero() {
     },
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/sherazai.exe/',
+      url: 'https://www.instagram.com/evolvewithsheraz/',
       svg: (
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
           <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      )
+    },
+    {
+      name: 'Featstack',
+      url: 'https://featstack.co/',
+      svg: (
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 17 12 22 22 17"></polyline>
+          <polyline points="2 12 12 17 22 12"></polyline>
         </svg>
       )
     }
@@ -78,16 +89,67 @@ export default function Hero() {
       <div className="container">
         {/* Centered Hero Details */}
         <div className="hero-content reveal-element">
-          <div className="hero-subtext">
-            Java · Spring Boot · PostgreSQL · REST APIs
+          {/* Social Proof Pill */}
+          <div className="hero-social-proof-pill">
+            <div className="avatar-stack">
+              <div className="avatar-circle avatar-c1">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                </svg>
+              </div>
+              <div className="avatar-circle avatar-c2">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                </svg>
+              </div>
+              <div className="avatar-circle avatar-c3">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                </svg>
+              </div>
+            </div>
+            <div className="social-proof-content">
+              <span className="proof-star">★</span>
+              <span className="proof-text">Mentoring 100+ Students & Graduates</span>
+              <span className="proof-divider">|</span>
+              <span className="proof-sub">Founder @ Featstack</span>
+            </div>
           </div>
           
           <h1 className="hero-title">
-            Building <span className="highlight-orange">Scalable</span> Backend Systems
+            Guiding Future <span className="highlight-orange">Engineers</span> to Real-World Impact
           </h1>
 
+          {/* The What · How · Why 3-Step Visual Flow */}
+          <div className="hero-pillars-flow">
+            <div className="pillar-step-badge pillar-what">
+              <span className="pillar-num">1</span>
+              <span className="pillar-label">What to Learn</span>
+            </div>
+            <div className="pillar-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+            <div className="pillar-step-badge pillar-how">
+              <span className="pillar-num">2</span>
+              <span className="pillar-label">How to Master It</span>
+            </div>
+            <div className="pillar-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+            <div className="pillar-step-badge pillar-why">
+              <span className="pillar-num">3</span>
+              <span className="pillar-label">Why It Matters</span>
+            </div>
+          </div>
+
           <p className="hero-tagline">
-            Backend systems for SaaS founders who can't afford to rebuild later. Scalable systems that grow with your business.
+            Empowering students, beginners, and fresh graduates to break into IT & Computer Science. I cut through the noise to answer the 3 fundamental questions: What to learn, How to master it, and Why it matters in production.
           </p>
 
           <div className="hero-ctas">
@@ -96,14 +158,14 @@ export default function Hero() {
               onClick={(e) => handleScrollTo(e, 'contact')}
               className="btn btn-filled-orange"
             >
-              Discuss Your Project
+              Book a 1-on-1 Guidance Session
             </a>
             <a
-              href="#projects"
-              onClick={(e) => handleScrollTo(e, 'projects')}
+              href="#services"
+              onClick={(e) => handleScrollTo(e, 'services')}
               className="btn btn-outline-blue"
             >
-              See My Work
+              Explore What I Teach
             </a>
           </div>
 

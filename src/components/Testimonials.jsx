@@ -30,7 +30,10 @@ export default function Testimonials() {
       <div className="container">
         {/* Header Title */}
         <div className="testimonials-header reveal-element">
-          <h2 className="testimonials-title">What People Say</h2>
+          <h2 className="testimonials-title">Mentorship Impact & Stories</h2>
+          <p style={{ marginTop: '12px', color: 'rgba(255, 255, 255, 0.85)', fontSize: '1rem' }}>
+            Real feedback from students, working developers, and university faculty transformed through structured guidance.
+          </p>
         </div>
 
         {/* Testimonials Grid/Scroll */}
